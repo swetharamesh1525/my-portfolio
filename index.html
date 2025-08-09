@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swetha R | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <h3 class="logo">Swetha R</h3>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HEADER / HERO ===== -->
+    <header id="hero" class="hero">
+        <div class="container">
+            <h3 class="fade-in">Hi There!</h3>
+            <h1 class="fade-in">I am <span>Swetha R</span></h1>
+            <p class="fade-in">Data Analyst | Building ML-backed solutions for real-world problems</p>
+            <a href="#contact" class="btn">Contact Me</a>
+            <div class="hero-info">
+                <p><strong>Email:</strong> <a href="mailto:swetharamesh9425@gmail.com">swetharamesh9425@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91-9123533550</p>
+                <p><strong>Location:</strong> Pudukkottai, India</p>
+            </div>
+        </div>
+    </header>
+    <div class="section-separator"></div>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-img-container">
+                <img src="C:\Users\darts\OneDrive\Desktop\OneDrive\mine\profile2.jpg" alt="Swetha R" class="about-img">
+            </div>
+            <div class="about-text">
+                <h2>Who am I?</h2>
+                <p>I’m Swetha R, a B.Tech AI & Data Science student with a CGPA of 8.432, passionate about creating impactful projects using Machine Learning, Data Analytics, and Web Technologies. My work spans healthcare, e-commerce, and data visualization.</p>
+                <ul>
+                    <li><strong>Education:</strong> Saranathan College of Engineering (2022–2026)</li>
+                    <li><strong>CGPA:</strong> 8.432</li>
+                    <li><strong>Email:</strong> <a href="mailto:swetharamesh9425@gmail.com">swetharamesh9425@gmail.com</a></li>
+                </ul>
+                <a href="C:\Users\darts\Downloads\Professional Minimalist CV Resume (3).pdf" class="btn" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES / SKILLS ===== -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="grid">
+                <div class="card">Python</div>
+                <div class="card">Java</div>
+                <div class="card">SQL</div>
+                <div class="card">HTML/CSS/JS</div>
+                <div class="card">Machine Learning</div>
+                <div class="card">Power BI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="project-card">
+                    <h3>AI Health Guardian</h3>
+                    <p>Multi-functional healthcare platform with symptom prediction, calorie tracker, vision monitoring, and mental health advisor. Built using Django and ML models.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Sales Data Analysis & Visualization</h3>
+                    <p>Analyzed and visualized sales trends using Power BI, enabling data-driven business decisions.</p>
+                </div>
+                <div class="project-card">
+                    <h3>E-Commerce Website</h3>
+                    <p>Developed a fully functional online store using HTML, CSS, JavaScript, and backend integration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:swetharamesh9425@gmail.com">swetharamesh9425@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/swetha-r-22029126a" target="_blank">linkedin</a></p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2025 Swetha R. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeIns = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        fadeIns.forEach(element => observer.observe(element));
+    </script>
+</body>
+</html>
